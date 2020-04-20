@@ -127,6 +127,7 @@ def game_hash
 end
 
 # Write code here
+<<<<<<< HEAD
 def num_points_scored(player)
   game_hash.each do |location, team_data|
     team_data[:players].each do |player_hash|
@@ -200,4 +201,16 @@ def big_shoe_rebounds
     end
   end
   rebounds
+=======
+
+def num_points_scored(player)
+  highest_scorer = {}
+  game_hash.each do |location, team_data|
+    team_data.each do |attribute, data|
+      if !highest_scorer[:player_name]
+          highest_scorer[:player_name] = game_hash[location][team_data][:points][0]
+      end
+    end
+  end
+>>>>>>> 4b80652d3ba73beaae195696fc3097a4d8e67c13
 end
